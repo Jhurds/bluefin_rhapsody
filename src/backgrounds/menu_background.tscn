@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/background_pngs/deeper_sea_bed.png" type="Texture" id=1]
+[ext_resource path="res://assets/tuna_asset/MenuAssets/Net.png" type="Texture" id=2]
+
+[node name="MenuBackground" type="Node"]
+
+[node name="BackgroundBase" type="Sprite" parent="."]
+position = Vector2( 0, -16.8179 )
+scale = Vector2( 0.488812, 0.8325 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="Sprite" type="Sprite" parent="BackgroundBase"]
+position = Vector2( 281.999, 3.5995 )
+scale = Vector2( 1.8015, 1 )
+texture = ExtResource( 2 )
+centered = false

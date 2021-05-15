@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/background_pngs/seabed.png" type="Texture" id=1]
+[ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=2]
+
+[node name="BackgroundScene" type="Node"]
+
+[node name="Background_1" type="ParallaxBackground" parent="."]
+
+[node name="Background_Layer_1" type="ParallaxLayer" parent="Background_1"]
+
+[node name="Seabed" type="Sprite" parent="Background_1/Background_Layer_1"]
+position = Vector2( -227.743, -167.81 )
+scale = Vector2( 1.11387, 1.42464 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="Player" parent="Background_1" instance=ExtResource( 2 )]
+position = Vector2( 260.705, 303.132 )
