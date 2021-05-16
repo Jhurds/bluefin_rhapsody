@@ -1,11 +1,5 @@
-extends KinematicBody2D
+extends Actor
 
-const ACCELERATION = 3000
-var velocity = Vector2.ZERO
-const MAX_SPEED = 700
-const FRICTION = 2000
-var facing_right = true
-var screen_size = Vector2.ZERO
 
 func _ready():
 	screen_size = get_viewport_rect().size
