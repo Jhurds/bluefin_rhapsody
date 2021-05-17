@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/game_scenes/level_button.gd" type="Script" id=1]
+
+[node name="Button" type="Button"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -1080.0
+margin_bottom = -520.0
+rect_min_size = Vector2( 200, 200 )
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="." to="." method="_on_Button_pressed"]
