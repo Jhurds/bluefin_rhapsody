@@ -1,16 +1,166 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=17 format=2]
 
-[ext_resource path="res://src/game_scenes/Play.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/game_scenes/Options.gd" type="Script" id=1]
+[ext_resource path="res://assets/menu_kits/fonts/ulove.TTF" type="DynamicFontData" id=2]
+[ext_resource path="res://assets/menu_kits/fonts/BubbleMan.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://assets/menu_kits/mix/Sound on border.png" type="Texture" id=4]
+[ext_resource path="res://assets/menu_kits/mix/Sound off.png" type="Texture" id=5]
+[ext_resource path="res://assets/menu_kits/mix/Window.png" type="Texture" id=6]
+[ext_resource path="res://assets/menu_kits/mix/Sound on.png" type="Texture" id=7]
+[ext_resource path="res://assets/menu_kits/mix/Sound off border.png" type="Texture" id=8]
+[ext_resource path="res://assets/menu_kits/fonts/D-DIN.ttf" type="DynamicFontData" id=9]
+[ext_resource path="res://assets/background_pngs/1_game_background.png" type="Texture" id=10]
 
-[node name="Options" instance=ExtResource( 1 )]
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.0627451, 0.560784, 0.654902, 1 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 0.94902, 0.905882, 0.905882, 1 )
+corner_radius_top_left = 13
+corner_radius_top_right = 13
+corner_radius_bottom_right = 13
+corner_radius_bottom_left = 13
 
-[node name="VBoxContainer" parent="CenterContainer" index="0"]
-margin_left = 471.0
-margin_right = 809.0
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.0862745, 0.607843, 0.705882, 1 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+corner_radius_top_left = 13
+corner_radius_top_right = 13
+corner_radius_bottom_right = 13
+corner_radius_bottom_left = 13
 
-[node name="Label" parent="CenterContainer/VBoxContainer" index="0"]
-margin_right = 338.0
-text = "Options Scene"
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.0627451, 0.560784, 0.654902, 1 )
+corner_radius_top_left = 13
+corner_radius_top_right = 13
+corner_radius_bottom_right = 13
+corner_radius_bottom_left = 13
 
-[node name="Button" parent="CenterContainer/VBoxContainer" index="1"]
-margin_right = 338.0
+[sub_resource type="DynamicFont" id=4]
+size = 129
+outline_size = 1
+use_filter = true
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 70
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 31
+use_filter = true
+font_data = ExtResource( 9 )
+
+[node name="OptionsScene" type="Node"]
+script = ExtResource( 1 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 10 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Control" parent="."]
+margin_right = 1284.0
+margin_bottom = 721.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = -166.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/CenterContainer"]
+margin_left = 642.0
+margin_top = 277.0
+margin_right = 642.0
+margin_bottom = 277.0
+alignment = 1
+
+[node name="Sprite" type="Sprite" parent="Control/CenterContainer/HBoxContainer"]
+position = Vector2( -282.998, -186.863 )
+scale = Vector2( 0.691412, 0.727512 )
+texture = ExtResource( 6 )
+centered = false
+
+[node name="SoundOnButton" type="TextureButton" parent="Control/CenterContainer/HBoxContainer/Sprite"]
+margin_left = 113.755
+margin_top = 131.949
+margin_right = 270.755
+margin_bottom = 273.948
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 4 )
+texture_disabled = ExtResource( 7 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SoundOffButton" type="TextureButton" parent="Control/CenterContainer/HBoxContainer/Sprite"]
+margin_left = 318.039
+margin_top = 129.474
+margin_right = 475.039
+margin_bottom = 271.474
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 8 )
+texture_hover = ExtResource( 8 )
+texture_disabled = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HelpButton" type="Button" parent="Control/CenterContainer/HBoxContainer/Sprite"]
+margin_left = 521.97
+margin_top = 143.272
+margin_right = 667.97
+margin_bottom = 262.272
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+text = "?"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OptionsLabel" type="Label" parent="Control/CenterContainer/HBoxContainer/Sprite"]
+margin_left = 238.564
+margin_top = 376.546
+margin_right = 544.564
+margin_bottom = 465.546
+custom_fonts/font = SubResource( 5 )
+text = "Options"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BackButton" type="Button" parent="."]
+margin_left = 541.027
+margin_top = 475.924
+margin_right = 715.027
+margin_bottom = 538.924
+custom_fonts/font = SubResource( 6 )
+text = "Back"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Control/CenterContainer/HBoxContainer/Sprite/SoundOnButton" to="." method="_on_SoundOnButton_pressed"]
+[connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]

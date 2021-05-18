@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bubble.png-68cade0a80ffe98be0bfec99b1d284e7.stex"
+path="res://.import/2_game_background.png-c739fac145b4cc913934b33c3f96b5c5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/menu_kits/mix/bubble.png"
-dest_files=[ "res://.import/bubble.png-68cade0a80ffe98be0bfec99b1d284e7.stex" ]
+source_file="res://assets/background_pngs/2_game_background.png"
+dest_files=[ "res://.import/2_game_background.png-c739fac145b4cc913934b33c3f96b5c5.stex" ]
 
 [params]
 
