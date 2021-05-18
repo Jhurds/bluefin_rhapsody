@@ -34,68 +34,70 @@ __meta__ = {
 [node name="Menu" type="VBoxContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 55.7828
-margin_top = 96.6489
-margin_right = -184.217
-margin_bottom = -63.3511
+margin_left = 100.0
+margin_top = 97.0
+margin_right = -100.0
+margin_bottom = -63.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Logo" type="TextureRect" parent="Menu"]
-margin_right = 876.0
+margin_right = 1080.0
 margin_bottom = 136.0
 texture = ExtResource( 9 )
 stretch_mode = 4
 
 [node name="CenterBox" type="HBoxContainer" parent="Menu"]
 margin_top = 140.0
-margin_right = 876.0
-margin_bottom = 440.0
+margin_right = 1080.0
+margin_bottom = 491.0
 rect_pivot_offset = Vector2( -305.611, -45.1537 )
 size_flags_vertical = 3
 
 [node name="Buttons" type="VBoxContainer" parent="Menu/CenterBox"]
-margin_right = 360.0
-margin_bottom = 300.0
+margin_right = 538.0
+margin_bottom = 351.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 20
 alignment = 1
 
 [node name="AdventureButton" parent="Menu/CenterBox/Buttons" instance=ExtResource( 4 )]
-margin_top = 40.0
-margin_right = 360.0
-margin_bottom = 100.0
+margin_top = 65.0
+margin_right = 538.0
+margin_bottom = 125.0
 
 [node name="LevelsButton" parent="Menu/CenterBox/Buttons" instance=ExtResource( 1 )]
-margin_top = 120.0
-margin_right = 360.0
-margin_bottom = 180.0
+margin_top = 145.0
+margin_right = 538.0
+margin_bottom = 205.0
 text = ""
 
 [node name="OptionsButton" parent="Menu/CenterBox/Buttons" instance=ExtResource( 3 )]
-margin_top = 200.0
-margin_right = 360.0
-margin_bottom = 260.0
+margin_top = 225.0
+margin_right = 538.0
+margin_bottom = 285.0
 text = ""
 
 [node name="Character" type="CenterContainer" parent="Menu/CenterBox"]
-margin_left = 364.0
-margin_right = 876.0
-margin_bottom = 300.0
+margin_left = 542.0
+margin_right = 1080.0
+margin_bottom = 351.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Tuna" type="TextureRect" parent="Menu/CenterBox/Character"]
-margin_right = 512.0
-margin_bottom = 300.0
+margin_left = 13.0
+margin_top = 25.0
+margin_right = 525.0
+margin_bottom = 325.0
 texture = ExtResource( 7 )
 
 [node name="Label" type="Label" parent="Menu"]
-margin_top = 444.0
-margin_right = 876.0
-margin_bottom = 509.0
+margin_top = 495.0
+margin_right = 1080.0
+margin_bottom = 560.0
 custom_fonts/font = SubResource( 1 )
 text = "Alpha Test
 Queen Studio"

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/gril.jpg-0e3005b072bac3fb7147295f3ce0ea8e.stex"
+path="res://.import/Sand.png-8e3fa108f34945595c6fd6ec9713e0e0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Media/gril.jpg"
-dest_files=[ "res://.import/gril.jpg-0e3005b072bac3fb7147295f3ce0ea8e.stex" ]
+source_file="res://assets/menu_kits/mix/Sand.png"
+dest_files=[ "res://.import/Sand.png-8e3fa108f34945595c6fd6ec9713e0e0.stex" ]
 
 [params]
 
