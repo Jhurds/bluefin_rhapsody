@@ -1,17 +1,14 @@
-extends Actor
+extends actor
+class_name Player
 
+onready var animationPlayer = $AnimationPlayer
 
 func _ready():
 	screen_size = get_viewport_rect().size
 
-onready var animationPlayer = $AnimationPlayer
 
 func _physics_process(delta):
-	var input_vector = Vector2.ZERO
-	input_vector.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
-	input_vector.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
-	
-	input_vector = input_vector.normalized()
+	var input_vector = get_input_vector_normalized()
 
 	if input_vector != Vector2.ZERO:
 		if input_vector.x > 0:
@@ -31,9 +28,11 @@ func _physics_process(delta):
 			animationPlayer.play("player_rest_left")
 		velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
 		
-	
-	
 	velocity = move_and_slide(velocity)
-	
-	#position.x = clamp(position.x, 0, screen_size.x)
-	#position.y = clamp(position.y, 0, screen_size.y)
+
+
+func get_input_vector_normalized() -> Vector2:
+	var input_vector = Vector2.ZERO
+	input_vector.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
+	input_vector.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
+	return input_vector.normalized()
