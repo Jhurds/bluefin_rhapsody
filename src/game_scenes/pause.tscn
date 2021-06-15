@@ -71,6 +71,23 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="mainMenu" type="Button" parent="pauseControl"]
+anchor_left = 0.5
+anchor_top = 0.465
+anchor_right = 0.5
+anchor_bottom = 0.465
+margin_left = -140.0
+margin_top = 74.4357
+margin_right = 136.0
+margin_bottom = 115.436
+rect_min_size = Vector2( 0, 10 )
+rect_pivot_offset = Vector2( 9.70321, 11.2116 )
+custom_fonts/font = SubResource( 2 )
+text = "Main menu"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Label" type="Label" parent="pauseControl"]
 anchor_left = 0.5
 anchor_right = 0.5
@@ -88,3 +105,4 @@ __meta__ = {
 
 [connection signal="pressed" from="pauseControl/continue" to="pauseControl" method="_on_continue_pressed"]
 [connection signal="pressed" from="pauseControl/quit" to="pauseControl" method="_on_quit_pressed"]
+[connection signal="pressed" from="pauseControl/mainMenu" to="pauseControl" method="_on_mainMenu_pressed"]
