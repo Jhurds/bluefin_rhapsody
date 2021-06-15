@@ -1,6 +1,6 @@
 extends Control
 
-func _process(delta):
+func _process(_delta):
 	if Input.is_action_pressed("ui_accept"):
 		visible = true
 		get_tree().paused = true

@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://assets/tuna_spritesheet_no_outline_512px_by_300px_per_frame.png" type="Texture" id=1]
 [ext_resource path="res://src/actors/anchovy.gd" type="Script" id=2]
@@ -7,14 +7,19 @@
 radius = 48.3797
 height = 93.1765
 
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 52.8367
+height = 100.461
+
 [node name="anchovy" type="KinematicBody2D"]
 scale = Vector2( 0.5, 0.5 )
 collision_layer = 2
-collision_mask = 9
+collision_mask = 8
 script = ExtResource( 2 )
 MAX_SPEED = 100
 
 [node name="Sprite" type="Sprite" parent="."]
+modulate = Color( 1, 0.447059, 0.447059, 1 )
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 hframes = 8
@@ -23,3 +28,13 @@ vframes = 10
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 rotation = 1.5708
 shape = SubResource( 1 )
+
+[node name="eatDetector" type="Area2D" parent="."]
+monitorable = false
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="eatDetector"]
+rotation = 1.5708
+shape = SubResource( 2 )
+
+[connection signal="body_entered" from="eatDetector" to="." method="_on_eatDetector_body_entered"]

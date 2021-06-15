@@ -5,7 +5,7 @@ onready var parent = $".."
 func _ready():
 	update_camera_offeset()
 	
-func _physics_process(delta):
+func _physics_process(_delta):
 	update_camera_offeset()
 
 func update_camera_offeset():
