@@ -1,5 +1,6 @@
 extends actor
 
+var eaten = []
 
 onready var animationPlayer = $AnimationPlayer
 
