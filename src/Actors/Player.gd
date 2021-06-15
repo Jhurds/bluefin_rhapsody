@@ -1,11 +1,19 @@
 extends actor
 
 var eaten = []
+export var calories: = 2000
 
 onready var animationPlayer = $AnimationPlayer
 
 func _ready():
 	screen_size = get_viewport_rect().size
+	
+func _on_eatDetector_body_entered(body):
+	eaten.append(body.duplicate())
+	print(eaten)
+	_digest_eaten(eaten)
+	print(calories)
+	
 
 
 func _physics_process(delta):
@@ -37,3 +45,9 @@ func get_input_vector_normalized() -> Vector2:
 	input_vector.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
 	input_vector.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
 	return input_vector.normalized()
+
+func _digest_eaten(eaten: Array) -> void:
+	for food in eaten:
+		calories += food.CALORIES
+		eaten.pop_front()
+

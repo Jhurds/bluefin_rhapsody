@@ -30,8 +30,7 @@ rotation = 1.5708
 shape = SubResource( 1 )
 
 [node name="eatDetector" type="Area2D" parent="."]
-monitorable = false
-collision_layer = 0
+collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="eatDetector"]
 rotation = 1.5708

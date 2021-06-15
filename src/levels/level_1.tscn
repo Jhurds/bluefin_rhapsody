@@ -16,3 +16,12 @@ position = Vector2( 631.085, 62.812 )
 
 [node name="anchovy" parent="." instance=ExtResource( 4 )]
 position = Vector2( 1718.65, 160.296 )
+
+[node name="anchovy2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1393.91, 279.208 )
+
+[node name="anchovy3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2328.86, 267.221 )
+
+[node name="anchovy4" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2168.54, -12.9624 )
