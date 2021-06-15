@@ -74,6 +74,7 @@ alignment = 1
 margin_top = 102.0
 margin_right = 538.0
 margin_bottom = 162.0
+scene_to_load = "res://src/levels/level_1.tscn"
 
 [node name="LevelsButton" parent="Menu/CenterBox/Buttons" instance=ExtResource( 2 )]
 margin_top = 182.0
@@ -82,11 +83,10 @@ margin_bottom = 242.0
 text = ""
 scene_to_load = "res://src/game_scenes/level_select.tscn"
 
-[node name="OptionsButton" parent="Menu/CenterBox/Buttons" instance=ExtResource( 4 )]
+[node name="QuitButton" parent="Menu/CenterBox/Buttons" instance=ExtResource( 4 )]
 margin_top = 262.0
 margin_right = 538.0
 margin_bottom = 322.0
-text = ""
 scene_to_load = "res://src/game_scenes/Options.tscn"
 
 [node name="Character" type="CenterContainer" parent="Menu/CenterBox"]
@@ -115,5 +115,5 @@ align = 1
 [node name="FadeIn" parent="." instance=ExtResource( 7 )]
 visible = false
 
-[connection signal="pressed" from="Menu/CenterBox/Buttons/OptionsButton" to="." method="_on_OptionsButton_pressed"]
+[connection signal="pressed" from="Menu/CenterBox/Buttons/QuitButton" to="." method="_on_QuitButton_pressed"]
 [connection signal="fade_finished" from="FadeIn" to="." method="_on_FadeIn_fade_finished"]
