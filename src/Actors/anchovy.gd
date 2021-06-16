@@ -1,4 +1,5 @@
 extends actor
+class_name anchovy
 
 var starting_position
 export var CALORIES: = 100
