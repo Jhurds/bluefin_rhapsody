@@ -12,7 +12,6 @@ script = ExtResource( 5 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 578.454, 114.52 )
-calories = 2000
 
 [node name="Level_1 Background" parent="." instance=ExtResource( 2 )]
 

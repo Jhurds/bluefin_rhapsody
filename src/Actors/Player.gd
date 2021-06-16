@@ -4,6 +4,7 @@ class_name Player
 var eaten = []
 
 onready var animationPlayer = $AnimationPlayer
+onready var eatDetector = $eatDetector
 
 func _ready():
 	screen_size = get_viewport_rect().size
@@ -11,7 +12,6 @@ func _ready():
 func _on_eatDetector_body_entered(body):
 	eaten.append(body.duplicate())
 	_digest_eaten(eaten)
-	print('ate')
 	
 
 func _physics_process(delta):
@@ -21,11 +21,11 @@ func _physics_process(delta):
 		if input_vector.x > 0:
 			facing_right = true
 			animationPlayer.play("player_swim_right")
-			get_node("eatDetector").rotation_degrees = 0
+			eatDetector.rotation_degrees = 0
 		elif input_vector.x < 0:
 			facing_right = false
 			animationPlayer.play("player_swim_left")
-			get_node("eatDetector").rotation_degrees = 180
+			eatDetector.rotation_degrees = 180
 		
 		_velocity = _velocity.move_toward(input_vector * MAX_SPEED, ACCELERATION * delta)
 		rotation = _velocity.normalized().y * 1.5 if facing_right else -(_velocity.normalized().y * 1.5)

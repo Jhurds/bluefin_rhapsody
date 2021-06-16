@@ -9,7 +9,6 @@ func _ready():
 	$level_cleared/Control.visible = false
 
 func _process(_delta):
-	print(player.calories)
 	if player.calories >= 2400:
 		$level_cleared/Control/score_box/gained_calories.text = str(player.calories - _original_calories)
 		$level_cleared/Control.visible = true
