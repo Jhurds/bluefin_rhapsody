@@ -1,7 +1,9 @@
 extends Control
 
+onready var player = get_node("Player")
+
 func _process(delta):
-	if player.calorie >= 1300:
+	if player.calorie >= 2400:
 		visible = true
 		get_tree().paused = true
 		
