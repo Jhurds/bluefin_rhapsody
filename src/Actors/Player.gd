@@ -10,11 +10,7 @@ func _ready():
 	
 func _on_eatDetector_body_entered(body):
 	eaten.append(body.duplicate())
-	print(eaten)
-	_digest_eaten(eaten)
-	print(calories)
 	
-
 
 func _physics_process(delta):
 	var input_vector = get_input_vector_normalized()
