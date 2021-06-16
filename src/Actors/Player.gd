@@ -25,17 +25,17 @@ func _physics_process(delta):
 			facing_right = false
 			animationPlayer.play("player_swim_left")
 		
-		_velocity = _velocity.move_toward(input_vector * MAX_SPEED, ACCELERATION * delta)
-		rotation = _velocity.normalized().y * 1.5 if facing_right else -(_velocity.normalized().y * 1.5)
+		self._velocity = _velocity.move_toward(input_vector * MAX_SPEED, ACCELERATION * delta)
+		self.rotation = _velocity.normalized().y * 1.5 if facing_right else -(_velocity.normalized().y * 1.5)
 		
 	else:
 		if facing_right:
 			animationPlayer.play("player_rest_right")
 		elif !facing_right:
 			animationPlayer.play("player_rest_left")
-		_velocity = _velocity.move_toward(Vector2.ZERO, FRICTION * delta)
+		self._velocity = _velocity.move_toward(Vector2.ZERO, FRICTION * delta)
 		
-	_velocity = move_and_slide(_velocity)
+	self._velocity = move_and_slide(_velocity)
 
 
 func get_input_vector_normalized() -> Vector2:

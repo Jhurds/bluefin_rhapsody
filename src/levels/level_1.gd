@@ -20,5 +20,5 @@ func _process(_delta):
 		$level_cleared/Control/score_box/gained_calories.text = str(calories_gained)
 		$level_cleared/Control.visible = true
 		$level_cleared/Control.get_tree().paused = true
-	print(food_pool.size())
+	
 
