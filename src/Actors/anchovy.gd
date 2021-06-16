@@ -1,5 +1,4 @@
-extends Actor
-class_name Anchovy
+extends "res://src/Actors/Actor.gd"
 
 var starting_position
 export var patrol_range = 1

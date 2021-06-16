@@ -1,5 +1,4 @@
-extends Actor
-class_name Player
+extends "res://src/Actors/Actor.gd"
 
 var eaten = []
 
