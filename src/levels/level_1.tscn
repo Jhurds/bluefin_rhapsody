@@ -23,7 +23,7 @@ position = Vector2( 578.454, 114.52 )
 [node name="level_cleared" parent="." instance=ExtResource( 6 )]
 
 [node name="anchovy2" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1393.91, 279.208 )
+position = Vector2( 1531.22, 163.328 )
 
 [node name="anchovy3" parent="." instance=ExtResource( 4 )]
 position = Vector2( 2328.86, 267.221 )
@@ -32,7 +32,7 @@ position = Vector2( 2328.86, 267.221 )
 position = Vector2( 2168.54, -12.9624 )
 
 [node name="anchovy" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1718.65, 160.296 )
+position = Vector2( 1719.77, 161.699 )
 
 [node name="anchovy5" parent="." instance=ExtResource( 4 )]
 
@@ -131,64 +131,54 @@ position = Vector2( 5269.11, -142.49 )
 position = Vector2( 4088.96, -159.479 )
 
 [node name="anchovy37" parent="." instance=ExtResource( 4 )]
-position = Vector2( 3271.57, 225.621 )
+position = Vector2( 1749.54, 296.753 )
 
 [node name="anchovy38" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1810.9, 326.808 )
+position = Vector2( 1811.38, 425.188 )
 
 [node name="anchovy39" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1697.03, -119.688 )
+position = Vector2( 1516.46, 301.51 )
 
 [node name="anchovy40" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1502.25, 368.76 )
+position = Vector2( 1590.19, -31.4678 )
 
 [node name="anchovy41" parent="." instance=ExtResource( 4 )]
-position = Vector2( 4466.51, 416.079 )
-scale = Vector2( 0.01, 0.01 )
+position = Vector2( 1692.46, -178.929 )
 
 [node name="anchovy42" parent="." instance=ExtResource( 4 )]
-position = Vector2( 4745.9, 484.038 )
-scale = Vector2( 0.01, 0.01 )
-
-[node name="anchovy43" parent="." instance=ExtResource( 4 )]
-position = Vector2( 4783.65, 321.692 )
-scale = Vector2( 0.01, 0.01 )
-
-[node name="anchovy44" parent="." instance=ExtResource( 4 )]
-position = Vector2( 2809.07, -3.0007 )
-scale = Vector2( 0.01, 0.01 )
-
-[node name="anchovy45" parent="." instance=ExtResource( 4 )]
-position = Vector2( 2593.86, 215.978 )
-scale = Vector2( 0.01, 0.01 )
-
-[node name="anchovy46" parent="." instance=ExtResource( 4 )]
-position = Vector2( 2016.21, 397.202 )
-scale = Vector2( 0.01, 0.01 )
-
-[node name="anchovy47" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1646.21, 114.039 )
-scale = Vector2( 0.01, 0.01 )
-
-[node name="anchovy48" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1483.87, -44.5313 )
-scale = Vector2( 0.01, 0.01 )
-
-[node name="anchovy49" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1453.66, -210.653 )
-scale = Vector2( 0.01, 0.01 )
-
-[node name="anchovy50" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1880.29, -248.408 )
-scale = Vector2( 0.01, 0.01 )
+position = Vector2( 2256.15, -188.443 )
 
 [node name="foodDetector" type="Area2D" parent="."]
 collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="foodDetector"]
-position = Vector2( 4123.75, 174.906 )
+position = Vector2( 4153.65, 185.564 )
 shape = SubResource( 1 )
+
+[node name="anchovy43" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1918.41, -236.011 )
+
+[node name="anchovy44" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2722.32, -26.711 )
+
+[node name="anchovy45" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2581.99, 242.05 )
+
+[node name="anchovy46" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2845.99, -226.498 )
+
+[node name="anchovy47" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2876.91, 368.106 )
+
+[node name="anchovy48" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3029.13, 472.756 )
+
+[node name="anchovy49" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3293.13, -183.686 )
+
+[node name="anchovy50" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3359.73, 387.133 )
 
 [connection signal="body_entered" from="foodDetector" to="." method="_on_foodDetector_body_entered"]
 [connection signal="body_exited" from="foodDetector" to="." method="_on_foodDetector_body_exited"]
