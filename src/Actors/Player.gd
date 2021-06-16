@@ -1,4 +1,5 @@
 extends Actor
+class_name Player
 
 var eaten = []
 
@@ -10,18 +11,21 @@ func _ready():
 func _on_eatDetector_body_entered(body):
 	eaten.append(body.duplicate())
 	_digest_eaten(eaten)
+	print('ate')
 	
 
 func _physics_process(delta):
 	var input_vector = get_input_vector_normalized()
-
+	
 	if input_vector != Vector2.ZERO:
 		if input_vector.x > 0:
 			facing_right = true
 			animationPlayer.play("player_swim_right")
+			get_node("eatDetector").rotation_degrees = 0
 		elif input_vector.x < 0:
 			facing_right = false
 			animationPlayer.play("player_swim_left")
+			get_node("eatDetector").rotation_degrees = 180
 		
 		_velocity = _velocity.move_toward(input_vector * MAX_SPEED, ACCELERATION * delta)
 		rotation = _velocity.normalized().y * 1.5 if facing_right else -(_velocity.normalized().y * 1.5)

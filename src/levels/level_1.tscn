@@ -10,8 +10,9 @@
 [node name="level_1" type="Node2D"]
 script = ExtResource( 5 )
 
-[node name="player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 631.085, 62.812 )
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 578.454, 114.52 )
+calories = 2000
 
 [node name="Level_1 Background" parent="." instance=ExtResource( 2 )]
 
