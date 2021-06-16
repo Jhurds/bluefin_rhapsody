@@ -46,6 +46,5 @@ func _digest_eaten(eaten: Array) -> void:
 	for food in eaten:
 		calories += food.calories
 		eaten.pop_front()
-		print(calories)
 		
 

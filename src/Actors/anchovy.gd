@@ -11,6 +11,7 @@ func _ready():
 	patrol_range = randi() % patrol_range + 100
 	
 func _on_eatDetector_body_entered(body):
+	visible = false
 	queue_free()
 
 func _physics_process(_delta) -> void:
