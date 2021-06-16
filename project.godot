@@ -10,24 +10,12 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "KinematicBody2D",
-"class": "Actor",
-"language": "GDScript",
-"path": "res://src/actors/Actor.gd"
-}, {
-"base": "Actor",
 "class": "Anchovy",
 "language": "GDScript",
-"path": "res://src/actors/anchovy.gd"
-}, {
-"base": "Actor",
-"class": "Player",
-"language": "GDScript",
-"path": "res://src/actors/Player.gd"
+"path": "res://src/Actors/anchovy.gd"
 } ]
 _global_script_class_icons={
-"Actor": "",
-"Anchovy": "",
-"Player": ""
+"Anchovy": ""
 }
 
 [application]

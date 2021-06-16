@@ -1,8 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://.import/Finding Nemo.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://src/game_scenes/pause.gd" type="Script" id=2]
 [ext_resource path="res://.import/Montserrat-Black.otf" type="DynamicFontData" id=3]
+[ext_resource path="res://.import/Montserrat-Bold.otf" type="DynamicFontData" id=4]
+[ext_resource path="res://.import/MontserratAlternates-Black.otf" type="DynamicFontData" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 size = 30
@@ -16,11 +18,18 @@ font_data = ExtResource( 1 )
 size = 70
 font_data = ExtResource( 3 )
 
+[sub_resource type="DynamicFont" id=4]
+size = 34
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 28
+font_data = ExtResource( 4 )
+
 [node name="pause" type="CanvasLayer"]
 
 [node name="pauseControl" type="Control" parent="."]
 pause_mode = 2
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 2 )
@@ -42,10 +51,10 @@ anchor_left = 0.5
 anchor_top = 0.465
 anchor_right = 0.5
 anchor_bottom = 0.465
-margin_left = -138.0
-margin_top = -43.0245
-margin_right = 138.0
-margin_bottom = -2.02451
+margin_left = -434.0
+margin_top = 203.2
+margin_right = -156.0
+margin_bottom = 257.2
 rect_min_size = Vector2( 0, 10 )
 rect_pivot_offset = Vector2( 9.70321, 11.2116 )
 custom_fonts/font = SubResource( 1 )
@@ -59,10 +68,10 @@ anchor_left = 0.5
 anchor_top = 0.465
 anchor_right = 0.5
 anchor_bottom = 0.465
-margin_left = -140.0
-margin_top = 85.1265
-margin_right = 136.0
-margin_bottom = 126.126
+margin_left = 187.0
+margin_top = 202.2
+margin_right = 463.0
+margin_bottom = 258.2
 rect_min_size = Vector2( 0, 10 )
 rect_pivot_offset = Vector2( 9.70321, 11.2116 )
 custom_fonts/font = SubResource( 2 )
@@ -76,10 +85,10 @@ anchor_left = 0.5
 anchor_top = 0.465
 anchor_right = 0.5
 anchor_bottom = 0.465
-margin_left = -140.0
-margin_top = 22.7635
-margin_right = 136.0
-margin_bottom = 63.7635
+margin_left = -123.0
+margin_top = 202.2
+margin_right = 153.0
+margin_bottom = 256.2
 rect_min_size = Vector2( 0, 10 )
 rect_pivot_offset = Vector2( 9.70321, 11.2116 )
 custom_fonts/font = SubResource( 2 )
@@ -92,9 +101,9 @@ __meta__ = {
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -341.825
-margin_top = 146.041
+margin_top = 103.662
 margin_right = 348.175
-margin_bottom = 265.041
+margin_bottom = 222.662
 custom_fonts/font = SubResource( 3 )
 text = "GAME PAUSED"
 align = 1
@@ -102,6 +111,34 @@ valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="VBoxContainer" type="VBoxContainer" parent="pauseControl"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -354.0
+margin_top = -93.0
+margin_right = 340.0
+margin_bottom = 144.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="pauseControl/VBoxContainer"]
+margin_right = 694.0
+margin_bottom = 42.0
+custom_fonts/font = SubResource( 4 )
+text = "Objectives:"
+align = 1
+valign = 1
+
+[node name="Label2" type="Label" parent="pauseControl/VBoxContainer"]
+margin_top = 46.0
+margin_right = 694.0
+margin_bottom = 82.0
+custom_fonts/font = SubResource( 5 )
+text = "- Gain a total of 400 calories from anchovies."
 
 [connection signal="pressed" from="pauseControl/continue" to="pauseControl" method="_on_continue_pressed"]
 [connection signal="pressed" from="pauseControl/quit" to="pauseControl" method="_on_quit_pressed"]
