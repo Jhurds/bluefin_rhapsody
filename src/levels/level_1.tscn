@@ -138,3 +138,43 @@ position = Vector2( 1697.03, -119.688 )
 
 [node name="anchovy40" parent="." instance=ExtResource( 4 )]
 position = Vector2( 1502.25, 368.76 )
+
+[node name="anchovy41" parent="." instance=ExtResource( 4 )]
+position = Vector2( 4466.51, 416.079 )
+scale = Vector2( 0.01, 0.01 )
+
+[node name="anchovy42" parent="." instance=ExtResource( 4 )]
+position = Vector2( 4745.9, 484.038 )
+scale = Vector2( 0.01, 0.01 )
+
+[node name="anchovy43" parent="." instance=ExtResource( 4 )]
+position = Vector2( 4783.65, 321.692 )
+scale = Vector2( 0.01, 0.01 )
+
+[node name="anchovy44" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2809.07, -3.0007 )
+scale = Vector2( 0.01, 0.01 )
+
+[node name="anchovy45" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2593.86, 215.978 )
+scale = Vector2( 0.01, 0.01 )
+
+[node name="anchovy46" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2016.21, 397.202 )
+scale = Vector2( 0.01, 0.01 )
+
+[node name="anchovy47" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1646.21, 114.039 )
+scale = Vector2( 0.01, 0.01 )
+
+[node name="anchovy48" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1483.87, -44.5313 )
+scale = Vector2( 0.01, 0.01 )
+
+[node name="anchovy49" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1453.66, -210.653 )
+scale = Vector2( 0.01, 0.01 )
+
+[node name="anchovy50" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1880.29, -248.408 )
+scale = Vector2( 0.01, 0.01 )

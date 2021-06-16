@@ -10,7 +10,7 @@ func _ready():
 	
 func _on_eatDetector_body_entered(body):
 	eaten.append(body.duplicate())
-	_digest_eaten(eaten)
+	_digest_eaten(body)
 	
 
 func _physics_process(delta):
@@ -20,11 +20,10 @@ func _physics_process(delta):
 		if input_vector.x > 0:
 			facing_right = true
 			animationPlayer.play("player_swim_right")
-			eatDetector.rotation_degrees = 0
+			
 		elif input_vector.x < 0:
 			facing_right = false
 			animationPlayer.play("player_swim_left")
-			eatDetector.rotation_degrees = 180
 		
 		_velocity = _velocity.move_toward(input_vector * MAX_SPEED, ACCELERATION * delta)
 		rotation = _velocity.normalized().y * 1.5 if facing_right else -(_velocity.normalized().y * 1.5)
@@ -45,9 +44,8 @@ func get_input_vector_normalized() -> Vector2:
 	input_vector.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
 	return input_vector.normalized()
 
-func _digest_eaten(eaten: Array) -> void:
-	for food in eaten:
-		calories += food.calories
-		eaten.pop_front()
+func _digest_eaten(food: Node2D) -> void:
+	calories += food.calories
+		
 		
 

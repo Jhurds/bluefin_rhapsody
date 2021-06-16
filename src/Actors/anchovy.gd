@@ -18,6 +18,3 @@ func _physics_process(_delta) -> void:
 		_velocity.x *= -1.0
 		scale.x *= -1.0
 	_velocity.y = move_and_slide(_velocity).y
-
-
-
