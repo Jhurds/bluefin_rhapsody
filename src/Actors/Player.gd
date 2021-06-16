@@ -1,7 +1,7 @@
 extends actor
+class_name player
 
 var eaten = []
-export var calories: = 2000
 
 onready var animationPlayer = $AnimationPlayer
 

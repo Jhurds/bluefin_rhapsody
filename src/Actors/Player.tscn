@@ -80,8 +80,10 @@ radius = 52.4212
 height = 113.068
 
 [node name="Player" type="KinematicBody2D"]
+scale = Vector2( 0.5, 0.5 )
 collision_mask = 8
 script = ExtResource( 2 )
+calories = 2000
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 rotation = 1.5708
