@@ -1,7 +1,8 @@
-extends actor
+extends Actor
+class_name Anchovy
 
 var starting_position
-export var patrol_range = 0
+export var patrol_range = 1
 
 func _ready():
 	_velocity.x = -MAX_SPEED

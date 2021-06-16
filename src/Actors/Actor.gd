@@ -1,5 +1,5 @@
 extends KinematicBody2D
-class_name actor
+class_name Actor
 
 export var ACCELERATION: = 3000
 var _velocity: = Vector2.ZERO

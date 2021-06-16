@@ -1,7 +1,5 @@
 extends Control
 
-onready var player = get_node("Player")
-
 func _goalReached():
 	visible = true
 	get_tree().paused = true

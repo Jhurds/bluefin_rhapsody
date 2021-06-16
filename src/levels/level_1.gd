@@ -1,7 +1,7 @@
 extends Node2D
 
 var eatable_pool = []
-onready var player = get_node("Player")
+onready var player = get_node("player")
 
 func _ready():
 	if player.calories >= 2400:
