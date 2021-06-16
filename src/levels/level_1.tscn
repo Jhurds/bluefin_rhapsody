@@ -4,9 +4,14 @@
 [ext_resource path="res://src/backgrounds/level_1_background.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/game_scenes/pause.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/actors/anchovy.tscn" type="PackedScene" id=4]
+<<<<<<< HEAD
 [ext_resource path="res://src/game_scenes/level_cleared.tscn" type="PackedScene" id=5]
+=======
+[ext_resource path="res://src/levels/level_1.gd" type="Script" id=5]
+>>>>>>> eab9e262ac3f368c518ef944896dc3848d169bc3
 
 [node name="level_1" type="Node2D"]
+script = ExtResource( 5 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 631.085, 62.812 )
@@ -18,9 +23,6 @@ FRICTION = null
 
 [node name="pause" parent="." instance=ExtResource( 3 )]
 
-[node name="anchovy" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1718.65, 160.296 )
-
 [node name="anchovy2" parent="." instance=ExtResource( 4 )]
 position = Vector2( 1393.91, 279.208 )
 
@@ -30,4 +32,9 @@ position = Vector2( 2328.86, 267.221 )
 [node name="anchovy4" parent="." instance=ExtResource( 4 )]
 position = Vector2( 2168.54, -12.9624 )
 
+<<<<<<< HEAD
 [node name="level_cleared" parent="." instance=ExtResource( 5 )]
+=======
+[node name="anchovy" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1718.65, 160.296 )
+>>>>>>> eab9e262ac3f368c518ef944896dc3848d169bc3
