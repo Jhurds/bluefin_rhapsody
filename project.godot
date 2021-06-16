@@ -18,16 +18,10 @@ _global_script_classes=[ {
 "class": "Anchovy",
 "language": "GDScript",
 "path": "res://src/actors/anchovy.gd"
-}, {
-"base": "Actor",
-"class": "Player",
-"language": "GDScript",
-"path": "res://src/actors/player.gd"
 } ]
 _global_script_class_icons={
 "Actor": "",
-"Anchovy": "",
-"Player": ""
+"Anchovy": ""
 }
 
 [application]

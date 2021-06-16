@@ -1,5 +1,4 @@
 extends Actor
-class_name Player
 
 var eaten = []
 
@@ -10,6 +9,7 @@ func _ready():
 	
 func _on_eatDetector_body_entered(body):
 	eaten.append(body.duplicate())
+	_digest_eaten(eaten)
 	
 
 func _physics_process(delta):
@@ -44,6 +44,8 @@ func get_input_vector_normalized() -> Vector2:
 
 func _digest_eaten(eaten: Array) -> void:
 	for food in eaten:
-		calories += food.CALORIES
+		calories += food.calories
 		eaten.pop_front()
+		print(calories)
+		
 
