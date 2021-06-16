@@ -12,17 +12,17 @@ _global_script_classes=[ {
 "base": "KinematicBody2D",
 "class": "actor",
 "language": "GDScript",
-"path": "res://src/Actors/Actor.gd"
+"path": "res://src/actors/actor.gd"
 }, {
 "base": "actor",
 "class": "anchovy",
 "language": "GDScript",
-"path": "res://src/Actors/anchovy.gd"
+"path": "res://src/actors/anchovy.gd"
 }, {
 "base": "actor",
 "class": "player",
 "language": "GDScript",
-"path": "res://src/Actors/Player.gd"
+"path": "res://src/actors/player.gd"
 } ]
 _global_script_class_icons={
 "actor": "",
@@ -33,7 +33,7 @@ _global_script_class_icons={
 [application]
 
 config/name="BlueFin Rhapsody"
-run/main_scene="res://src/home_menu_screen.tscn"
+run/main_scene="res://src/levels/level_1.tscn"
 config/icon="res://icon.png"
 
 [display]
