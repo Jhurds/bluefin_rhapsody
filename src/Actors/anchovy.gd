@@ -1,5 +1,4 @@
 extends actor
-class_name anchovy
 
 var starting_position
 export var patrol_range = 0

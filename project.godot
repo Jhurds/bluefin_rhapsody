@@ -12,22 +12,16 @@ _global_script_classes=[ {
 "base": "KinematicBody2D",
 "class": "actor",
 "language": "GDScript",
-"path": "res://src/actors/actor.gd"
+"path": "res://src/actors/Actor.gd"
 }, {
 "base": "actor",
 "class": "anchovy",
 "language": "GDScript",
-"path": "res://src/actors/anchovy.gd"
-}, {
-"base": "actor",
-"class": "player",
-"language": "GDScript",
-"path": "res://src/actors/player.gd"
+"path": "res://src/Actors/anchovy.gd"
 } ]
 _global_script_class_icons={
 "actor": "",
-"anchovy": "",
-"player": ""
+"anchovy": ""
 }
 
 [application]

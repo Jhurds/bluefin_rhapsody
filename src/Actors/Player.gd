@@ -1,5 +1,5 @@
 extends actor
-class_name player
+
 
 var eaten = []
 

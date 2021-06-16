@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://.import/Finding Nemo.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://.import/Montserrat-Black.otf" type="DynamicFontData" id=2]
+[ext_resource path="res://src/game_scenes/cleared.gd" type="Script" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 size = 30
@@ -30,6 +31,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = -2.11896
 margin_right = -2.1189
+script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -109,3 +111,5 @@ custom_fonts/font = SubResource( 5 )
 text = "1000"
 align = 1
 valign = 1
+
+[connection signal="pressed" from="Control/main_menu" to="Control" method="_on_main_menu_pressed"]

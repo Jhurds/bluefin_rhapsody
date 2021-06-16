@@ -1,6 +1,7 @@
 extends Node2D
 
 
+
 var eatable_pool = []
 onready var player = get_node("Player")
 
