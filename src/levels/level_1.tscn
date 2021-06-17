@@ -172,13 +172,13 @@ position = Vector2( 3293.13, -183.686 )
 [node name="anchovy50" parent="." instance=ExtResource( 4 )]
 position = Vector2( 3359.73, 387.133 )
 
-[node name="foodDetector" type="Area2D" parent="."]
+[node name="enemyDetector" type="Area2D" parent="."]
 collision_layer = 0
 collision_mask = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="foodDetector"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemyDetector"]
 position = Vector2( 4153.65, 185.564 )
 shape = SubResource( 1 )
 
-[connection signal="body_entered" from="foodDetector" to="." method="_on_foodDetector_body_entered"]
-[connection signal="body_exited" from="foodDetector" to="." method="_on_foodDetector_body_exited"]
+[connection signal="body_entered" from="enemyDetector" to="." method="_on_foodDetector_body_entered"]
+[connection signal="body_exited" from="enemyDetector" to="." method="_on_foodDetector_body_exited"]

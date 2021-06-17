@@ -48,6 +48,10 @@ points = PoolVector2Array( 0, 0, 30, 0, 30, 30, 0, 30 )
 0/z_index = 0
 
 [node name="Level_1 Background" type="Node"]
+__meta__ = {
+"_edit_horizontal_guides_": [ -296.0, -304.0, -296.0, 632.0 ],
+"_edit_vertical_guides_": [ 0.0 ]
+}
 
 [node name="Background_1" type="ParallaxBackground" parent="."]
 
